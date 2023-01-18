@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import "bulma/css/bulma.css";
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 20px;
+}
+
+.container{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.d-flex{
+  display: flex;
+  justify-content: center;
+  
+}
+
+.d-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:20px
+}
+
+app-root{
+  background-color: rgb(43, 43, 30);
+}

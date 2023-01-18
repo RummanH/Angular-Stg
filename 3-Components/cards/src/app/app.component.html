@@ -1,0 +1,3 @@
+<div class="d-grid container">
+ <app-card *ngFor="let post of getPosts()" [title]="post.title" [imgUrl]="post.imgUrl" [userName]="post.userName" [content]="post.content"></app-card>
+</div>
