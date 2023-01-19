@@ -1,0 +1,12 @@
+.img{
+  height: 300px;
+  width: 500px;
+}
+.my-btn{
+  cursor: pointer;
+}
+
+:host{
+  margin: 0 auto;
+  max-width: 500px;
+}

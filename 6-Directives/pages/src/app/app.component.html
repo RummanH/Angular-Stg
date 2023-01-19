@@ -1,0 +1,52 @@
+<div class="container">
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item" [appClass]="{disabled : currentPage === 0}">
+        <a class="page-link my-btn" (click)="currentPage = currentPage -1">Prev</a>
+      </li>
+      <!-- <ng-container *ngFor="let image of images; let i = index" > -->
+      <ng-container *appTimes="images.length; let i = index">
+         <!-- <li class="page-item" [ngClass]="{active : i === currentPage}" *ngIf="checkWindowIndex(i)">
+           <a class="page-link my-btn" (click)="currentPage = i">{{i+1}}</a>
+         </li> -->
+        <li class="page-item" [appClass]="{active : i === currentPage}" *ngIf="checkWindowIndex(i)">
+          <a class="page-link my-btn" (click)="currentPage = i">{{i+1}}</a>
+       </li>
+     </ng-container>
+     <!-- <li class="page-item" *ngFor="let image of images; let i = index" [ngClass]="getClass()">
+      <a href={{image.url}} class="page-link">{{i+1}}</a>
+     </li> -->
+     <li class="page-item" [ngClass]="{disabled : currentPage === images.length -1}">
+       <a class="page-link my-btn" (click)="currentPage = currentPage + 1">Next</a>
+     </li>
+   </ul>
+  </nav>
+  <div>
+    <!-- <h4 appClass>{{images[currentPage].title}}</h4> -->
+    <!-- <h4 appClass [color]="'green'">{{images[currentPage].title}}</h4> -->
+    <h4>{{images[currentPage].title}}</h4>
+    <img [src]="images[currentPage].url" alt="" class="img">
+  </div>
+</div>
+
+<div [ngSwitch]="currentPage">
+  <div *ngSwitchCase="0">
+   current page is 0
+  </div>
+  <div *ngSwitchCase="0">
+    current page is 0
+   </div>
+  <div *ngSwitchCase="1">
+    current page is 1
+   </div>
+   <div *ngSwitchCase="2">
+    current page is 2
+   </div>
+   <div *ngSwitchDefault>
+    Unknown current page
+   </div>
+</div>
+
+<!-- <ul *appTimes="5">
+  <li>Hi there</li>
+</ul> -->
