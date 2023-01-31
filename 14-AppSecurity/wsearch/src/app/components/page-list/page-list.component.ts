@@ -9,6 +9,6 @@ export class PageListComponent implements OnInit {
   @Input() results: any = [];
 
   constructor() {}
-
+  
   ngOnInit(): void {}
 }
